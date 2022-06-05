@@ -1,0 +1,24 @@
+spring:
+  jpa:
+    show-sql: true
+    open-in-view: false
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL57Dialect
+        format_sql: true
+  datasource:
+    hikari:
+      jdbc-url: jdbc:h2:mem:testdb;MODE=MYSQL
+  h2:
+    console:
+      enabled: true
+
+## 그래들 버전 이슈 해결법
+#  spring.jpa.show-sql=true
+#  spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL57Dialect
+#  spring.jpa.properties.hibernate.dialect.storage_engine=innodb
+#  spring.datasource.hikari.jdbc-url=jdbc:h2:mem://localhost/~/testdb;MODE=MYSQL
+#  spring.h2.console.enabled=true
+
